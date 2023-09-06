@@ -5,10 +5,7 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
-    data = request.form
-    print(data)
     return render_template("login.html")
-
 
 @auth.route('/logout', methods=['GET', 'POST'])
 def logout():
@@ -32,6 +29,7 @@ def sign_up():
         elif len(password1) < 7:
             pass
         else:
-            #add the user details
+            pass
+            # add the user details
 
     return render_template("sign_up.html")
